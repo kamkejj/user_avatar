@@ -1,0 +1,44 @@
+<?php
+
+/**
+ * 
+ */
+function user_avatar_install() {
+  // Create my tables.
+  drupal_install_schema('user_avatar');
+}
+
+/**
+ * 
+ */
+function user_avatar_uninstall() {
+  // Drop my tables.
+  drupal_uninstall_schema('user_avatar');
+}
+
+/**
+ * 
+ */
+function user_avatar_schema() {
+  $schema['user_avatar'] = array(
+  'description' => t('Save timestamp when a user profile picture is added.'),
+  'fields' => array(
+    'uid' => array(
+      'description' => t('User Id'),
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+    ),
+    'timestamp' => array(
+      'description' => t('Timestamp when profile picture was added.'),
+      'type' => 'int',
+      'unsigned' => TRUE,
+      'not null' => TRUE,
+    ),
+  ),
+  'primary key' => array('uid'),
+);
+
+  return $schema;
+}
+
