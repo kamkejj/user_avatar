@@ -1,6 +1,6 @@
 ; $Id$
 name = User Avatar
-description = "Alter User info when adding/updating users."
+description = "Adds cachebusting to user profile photo when viewing profile and with advanced_forum module."
 package = "GBN Custom Modules"
 
 core = 6.x
