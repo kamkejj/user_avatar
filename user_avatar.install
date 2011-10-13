@@ -19,6 +19,15 @@ function user_avatar_uninstall() {
 /**
  * 
  */
+/**
+function user_avatar_update_1() {
+  $ret = array();
+  db_add_field($ret, 'mytable1', 'newcol', array('type' => 'int'));
+  return $ret;
+**/
+/**
+ * 
+ */
 function user_avatar_schema() {
   $schema['user_avatar'] = array(
   'description' => t('Save timestamp when a user profile picture is added.'),

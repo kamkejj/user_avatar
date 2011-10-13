@@ -2,4 +2,5 @@
 name = User Avatar
 description = "Alter User info when adding/updating users."
 package = "GBN Custom Modules"
+
 core = 6.x
